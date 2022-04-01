@@ -1,0 +1,2 @@
+# AI1110--assign1
+ASSIGNMENTS
