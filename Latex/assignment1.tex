@@ -1,4 +1,4 @@
- \let\negmedspace\undefined
+\let\negmedspace\undefined
 \let\negthickspace\undefined
 %\RequirePackage{amsmath}
 \documentclass[journal,12pt,twocolumn]{IEEEtran}
@@ -6,6 +6,7 @@
 % \usepackage{setspace}
  \usepackage{gensymb}
 %\doublespacing
+ \usepackage{polynom}
 %\singlespacing
 %\usepackage{silence}
 %Disable all warnings issued by latex starting with "You have..."
@@ -58,19 +59,20 @@
 % \usepackage{multicol}
 % \usepackage{chngcntr}
 %\usepackage{enumerate}
-
+\usepackage{tfrupee}
+\usepackage{float}
 %\usepackage{wasysym}
 %\newcounter{MYtempeqncnt}
 \DeclareMathOperator*{\Res}{Res}
 \DeclareMathOperator*{\equals}{=}
 %\renewcommand{\baselinestretch}{2}
-\renewcommand\thesection{\arabic{section}}
-\renewcommand\thesubsection{\thesection.\arabic{subsection}}
-\renewcommand\thesubsubsection{\thesubsection.\arabic{subsubsection}}
+%\renewcommand\thesection{\arabic{section}}
+%\renewcommand\thesubsection{\thesection.\arabic{subsection}}
+%\renewcommand\thesubsubsection{\thesubsection.\arabic{subsubsection}}
 
-\renewcommand\thesectiondis{\arabic{section}}
-\renewcommand\thesubsectiondis{\thesectiondis.\arabic{subsection}}
-\renewcommand\thesubsubsectiondis{\thesubsectiondis.\arabic{subsubsection}}
+%\renewcommand\thesectiondis{\arabic{section}}
+%\renewcommand\thesubsectiondis{\thesectiondis.\arabic{subsection}}
+%\renewcommand\thesubsubsectiondis{\thesubsectiondis.\arabic{subsubsection}}
 
 % correct bad hyphenation here
 \hyphenation{op-tical net-works semi-conduc-tor}
@@ -86,6 +88,10 @@ columns=fullflexible
 %language=tex,
 %frame=single, 
 %breaklines=true
+%}
+\begin{document}
+
+%
 
 
 \newtheorem{theorem}{Theorem}[section]
@@ -121,12 +127,6 @@ columns=fullflexible
 \theoremstyle{remark}
 \newtheorem{rem}{Remark}
 \newcommand{\sgn}{\mathop{\mathrm{sgn}}}
-\providecommand{\abs}[1]{\left\vert#1\right\vert}
-\providecommand{\res}[1]{\Res\displaylimits_{#1}} 
-\providecommand{\norm}[1]{\left\lVert#1\right\rVert}
-%\providecommand{\norm}[1]{\lVert#1\rVert}
-\providecommand{\mtx}[1]{\mathbf{#1}}
-\providecommand{\mean}[1]{E\left[ #1 \right]}
 \providecommand{\fourier}{\overset{\mathcal{F}}{ \rightleftharpoons}}
 %\providecommand{\hilbert}{\overset{\mathcal{H}}{ \rightleftharpoons}}
 \providecommand{\system}{\overset{\mathcal{H}}{ \longleftrightarrow}}
@@ -137,7 +137,9 @@ columns=fullflexible
 \newcommand{\myvec}[1]{\ensuremath{\begin{pmatrix}#1\end{pmatrix}}}
 \newcommand{\mydet}[1]{\ensuremath{\begin{vmatrix}#1\end{vmatrix}}}
 %\numberwithin{equation}{section}
-\numberwithin{equation}{subsection}
+%\numberwithin{figure}{section}
+%\numberwithin{table}{section}
+%\numberwithin{equation}{subsection}
 %\numberwithin{problem}{section}
 %\numberwithin{definition}{section}
 \makeatletter
@@ -146,7 +148,7 @@ columns=fullflexible
 \let\StandardTheFigure\thefigure
 \let\vec\mathbf
 %\renewcommand{\thefigure}{\theproblem.\arabic{figure}}
-\renewcommand{\thefigure}{\theproblem}
+%\renewcommand{\thefigure}{\theproblem}
 %\setlist[enumerate,1]{before=\renewcommand\theequation{\theenumi.\arabic{equation}}
 %\counterwithin{equation}{enumi}
 %\renewcommand{\theequation}{\arabic{subsection}.\arabic{equation}}
@@ -158,7 +160,6 @@ columns=fullflexible
 \vspace{3cm}
 \title{ASSIGNMENT-1}
 \author{Nwjwr Khungur Brahma}
-\begin{document}
 \maketitle
 \textbf{Question:}
 Calculate the ratio in which the line joining $\vec{A}$=\ \myvec{\text{-}4\\2} and $\vec{B}$=\ \myvec{3\\6} is divided by the point $\vec{P}$=\ \myvec{x$*$\\3}. Also find 
