@@ -159,38 +159,38 @@ columns=fullflexible
      \def\midbox#1{\raisebox{-0.5\baselineskip}[0in][0in]{#1}}
 \vspace{3cm}
 \title{ASSIGNMENT-2}
-\author{Nwjwr Khungur Brahma}
+\author{Nwjwr Khungur Brahma(AI20BTECH11016)}
 \maketitle
 \textbf{Question:}
 Solve the equation for x:\bigskip\\
-$sin^{\text{-}1}x + sin^{\text{-}1}(1-x)= cos^{\text{-}1}x, x \neq 0$\bigskip \\
+$\sin^{\text{-}1}x + \sin^{\text{-}1}(1-x)= \cos^{\text{-}1}x, x \neq 0$\bigskip \\
 \textbf{Solution:}
 Taking the equation:
 \begin{align}
-sin^{\text{-}1}x+sin^{\text{-}1}(1-x) = cos^{\text{-}1}x\label{eq:1}
+\sin^{\text{-}1}x+\sin^{\text{-}1}(1-x) = \cos^{\text{-}1}x\label{eq:1}
 \end{align}
 Also, we know that
 \begin{align}
-cos^{\text{-}1}x+sin^{\text{-}1}x=\frac{\pi}{2}\label{eq:2}
+\cos^{\text{-}1}x+\sin^{\text{-}1}x=\frac{\pi}{2}\label{eq:2}
 \end{align}
 Using \eqref{eq:1} and \eqref{eq:2} we get,
 \begin{align}
-\implies sin^{\text{-}1}x+sin^{\text{-}1}(1-x) &= \frac{\pi}{2} - sin^{\text{-}1}x\\
-\implies sin^{\text{-}1}(1-x) &= \frac{\pi}{2} - 2sin^{\text{-}1}x\\
-\implies sin\left(\frac{\pi}{2}-2sin^{\text{-}1}x\right)&= (1-x)\\
-\implies cos(2sin^{\text{-}1}x)&=(1-x)\label{eq:3}
+\implies \sin^{\text{-}1}x+\sin^{\text{-}1}(1-x) &= \frac{\pi}{2} - \sin^{\text{-}1}x\\
+\implies \sin^{\text{-}1}(1-x) &= \frac{\pi}{2} - 2\sin^{\text{-}1}x\\
+\implies \sin\left(\frac{\pi}{2}-2\sin^{\text{-}1}x\right)&= (1-x)\\
+\implies \cos(2\sin^{\text{-}1}x)&=(1-x)\label{eq:3}
 \end{align}
 We know that,
 \begin{align}
-cos(2y)=1-2sin^{2}y\label{eq:4}
+\cos(2y)=1-2\sin^{2}y\label{eq:4}
 \end{align}
 From equation \eqref{eq:3} and \eqref{eq:4} we get,
 \begin{align}
-\implies 1-2sin^{2}(sin^{\text{-}1}x)&= (1-x)\label{eq:5}
+\implies 1-2\sin^{2}(\sin^{\text{-}1}x)&= (1-x)\label{eq:5}
 \end{align}
 Also,
 \begin{align}
-sin(sin^{\text{-}1}x)=x\label{eq:6}
+\sin(\sin^{\text{-}1}x)=x\label{eq:6}
 \end{align}
 Now taking \eqref{eq:5} and \eqref{eq:6}
 \begin{align}
@@ -201,4 +201,9 @@ Now taking \eqref{eq:5} and \eqref{eq:6}
 \end{align}
 As already mentioned that $x\neq0$.
 Therefore $x=\frac{1}{2}$
+\begin{figure}
+\includegraphics[scale=0.65]{fig2.png}
+\caption{Graph showing the intersection of $y = \sin^{\text{-}1}x+\sin^{\text{-}1}(1-x)$ and $y = \cos^{\text{-1}}x$}
+\label{fig}
+\end{figure}
 \end{document} 
