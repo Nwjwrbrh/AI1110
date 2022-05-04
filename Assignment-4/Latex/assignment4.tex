@@ -1,0 +1,43 @@
+\documentclass[journal,12pt,twocolumn]{IEEEtran}
+\usepackage{hyperref}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{mathtools}
+\title{Assignment-4}
+\author{Nwjwr Khungur Brahma (AI20BTECH11016)}
+\begin{document}
+\maketitle
+\textbf{Question:}
+A jar contain 24 marbles, some are green and the others are blue. If a marble is drawn at random from the jar, the probability that it is green is $\dfrac{2}{3}$. Find the number of blue balls in the jar.\\
+\textbf{Solution:}\\
+Lets say the number of green balls be $x$ and number of blue bays be $y$.\\
+$\therefore$ we get,
+\begin{align}
+x + y = 24\label{eq:1}
+\end{align}
+Lets take the event of randomly drawing a green ball be $E$ then the event of drawing a blue ball is $\overline{E}$. So,
+\begin{align}
+P(E)+P(\overline{E})=1\label{eq:2}
+\end{align}
+According to the question given,
+\begin{align}
+P(E)&=\dfrac{x}{x+y}=\frac{2}{3}\label{eq:3}\\
+P(\overline{E})&=\dfrac{y}{x+y}\label{eq:4}
+\end{align}
+From \eqref{eq:2} and \eqref{eq:3} we get,
+\begin{align}
+P(E)+P(\overline{E})&=1\\
+\implies \frac{2}{3}+P(\overline{E})&=1\\
+\implies P(\overline{E})&=1-\frac{2}{3}\\
+\implies P(\overline{E})&=\frac{1}{3}\label{eq:5}
+\end{align}
+Now taking \eqref{eq:1}, \eqref{eq:4} and \eqref{eq:5}
+\begin{align}
+P(\overline{E})&=\frac{1}{3}\\
+\implies \dfrac{y}{x+y} &=\frac{1}{3}\\
+\implies \dfrac{y}{24}&=\frac{1}{3}\\
+\implies y&=\frac{24\times1}{3}\\
+\implies y&=8
+\end{align}
+$\therefore$ the number of blue balls in the jar is 8.
+\end{document}
