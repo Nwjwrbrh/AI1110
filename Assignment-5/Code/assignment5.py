@@ -50,9 +50,9 @@ ep_2=div(crt_3,crt_4)
 print('The theoritical probability for the first condition and the second condition is',tp_1,'and',tp_2)
 print('The experimental probability for the first condition and the second condition is',ep_1,'and',ep_2)
 
-##kept this if this is the correct one
-"""x=rn.randint(0,37)
+#kept this if this is the correct one
+'''x=rn.randint(0,37)
 y=rn.randint(0,37)
 ep_1=div(x,N)
 ep_2=div(y,N)
-print('The experimental probability for the first condition and the second condition is',ep_1,'and',ep_2)"""
+print('The experimental probability for the first condition and the second condition is',ep_1,'and',ep_2)'''
