@@ -1,0 +1,70 @@
+% Inbuilt themes in beamer
+\documentclass{beamer}
+
+% Theme choice:
+\usetheme{CambridgeUS}
+
+% Title page details: 
+\title{Assignment-6} 
+\author{Nwjwr Khungur Brahma (AI20BTECH11016)}
+\date{\today}
+
+
+\begin{document}
+
+% Title page frame
+\begin{frame}
+    \titlepage 
+\end{frame}
+
+
+% Outline frame
+\begin{frame}{Outline}
+    \tableofcontents
+\end{frame}
+
+
+% Lists frame
+\section{Question}
+\begin{frame}{Question}
+A man is known to speak truth 3 out of 4 times. He throws a die and reports that it is a six. Find the probability that it is actually a six.
+\end{frame}
+
+\section{Solution}
+\begin{frame}{Solution}
+Let the event that the man reports the result to be six be $E$.\\The event that six actually occurs on the die be $X$ and $\overline{X}$ be the event that six does not occur.\\
+Then,
+\begin{align}
+\text{Probability that die rolls six}&=P(X)=\dfrac{1}{6}\label{eq:1}\\
+\text{Probability that die does not roll six}&=P(\overline{X})=\dfrac{5}{6}\label{eq:2}
+\end{align}
+Probabilities when the man reports the result to be six,
+\begin{align}
+\text{Probability that six actually occurs}&=P(E|X)=\dfrac{3}{4}\label{eq:3}\\
+\text{Probability that it is not a six}&=P(E|\overline{X})=\dfrac{1}{4}\label{eq:4}
+\end{align}
+\end{frame}
+
+
+\begin{frame}
+Now by Bayes's Formula we get,\\
+Probability that the man reports the result to be six is actually a six,\\
+\begin{align}
+P(X|E)&=\dfrac{P(X)\times P(E|X)}{P(X)\times P(E|X)+P(\overline{X})\times P(E|\overline{X})}
+\end{align}
+Now using the values from \eqref{eq:1}, \eqref{eq:2}, \eqref{eq:3} and \eqref{eq:4},
+\begin{align}
+P(X|E)&=\dfrac{\dfrac{1}{6}\times \dfrac{3}{4}}{\dfrac{1}{6}\times \dfrac{3}{4}+\dfrac{5}{6}\times\dfrac{1}{4}}\\
+&=\dfrac{\dfrac{3}{24}}{\dfrac{3}{24}+\dfrac{5}{24}}
+\end{align}
+\end{frame}
+
+
+\begin{frame}
+\begin{align}
+&=\dfrac{\dfrac{3}{24}}{\dfrac{8}{24}}\\
+&=\dfrac{3}{8}
+\end{align}
+\end{frame}
+
+\end{document}
