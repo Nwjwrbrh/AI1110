@@ -1,5 +1,24 @@
 % Inbuilt themes in beamer
 \documentclass{beamer}
+\usepackage{enumitem}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{gensymb}
+\usepackage{graphicx}
+\usepackage{multicol}
+
+\def\inputGnumericTable{}
+
+\usepackage[latin1]{inputenc}                                 
+\usepackage{color}                                            
+\usepackage{array}                                            
+\usepackage{longtable}                                        
+\usepackage{calc}                                             
+\usepackage{multirow}                                         
+\usepackage{hhline}                                           
+\usepackage{ifthen}
+\usepackage{caption} 
+\captionsetup[table]{skip=3pt}  
 
 % Theme choice:
 \usetheme{CambridgeUS}
@@ -33,6 +52,16 @@ A man is known to speak truth 3 out of 4 times. He throws a die and reports that
 \section{Solution}
 \begin{frame}{Solution}
 Let the event that the man reports the actual six be $E$ = 1 and lies as six be $E$ = 0.\\The event that six actually occurs on the die be $X$ = 1 and $X$ = 0 be the event that six does not occur.\\
+\end{frame}
+
+\begin{frame}
+\begin{table}[ht!]
+    \input{E:/AI1110--Assignments/Assignment-6/Tables/table.tex}
+    \label{Table 1}
+\end{table}
+\end{frame}
+
+\begin{frame}
 Then,
 \begin{align}
 \text{Probability that die rolls six}&=P(X=1)=\dfrac{1}{6}\label{eq:1}\\
@@ -44,7 +73,6 @@ Probabilities when the man reports the result to be six,
 \text{Probability that it is not a six}&=P(E=0|X=0)=\dfrac{1}{4}\label{eq:4}
 \end{align}
 \end{frame}
-
 
 \begin{frame}
 Now by Bayes's Formula we get,\\
