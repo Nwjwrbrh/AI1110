@@ -1,0 +1,63 @@
+% Inbuilt themes in beamer
+\documentclass{beamer}
+\usepackage{enumitem}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{gensymb}
+\usepackage{graphicx}
+\usepackage{multicol}
+
+\def\inputGnumericTable{}
+
+\usepackage[latin1]{inputenc}                                 
+\usepackage{color}                                            
+\usepackage{array}                                            
+\usepackage{longtable}                                        
+\usepackage{calc}                                             
+\usepackage{multirow}                                         
+\usepackage{hhline}                                           
+\usepackage{ifthen}
+\usepackage{caption} 
+\captionsetup[table]{skip=3pt}  
+
+% Theme choice:
+\usetheme{CambridgeUS}
+
+% Title page details: 
+\title{Assignment-7} 
+\author{Nwjwr Khungur Brahma (AI20BTECH11016)}
+\date{\today}
+
+\begin{document}
+
+\begin{frame}
+\titlepage
+\end{frame}
+
+\begin{frame}{Outline}
+\tableofcontents
+\end{frame}
+
+\section{Question}
+\begin{frame}{Question}
+A telephone occurs at random in the interval $(0,T)$. This means that the probability that it will occur in the interval $0\leq t \leq t_0$ equals $\dfrac{t_0}{T}$. Thus the outcomes of this experiment are all points in the interval $(0,T)$. Then what will be the probability of the event that the call will occur in the interval $(t_1,t_2)$?
+\end{frame}
+
+\section{Solution}
+\begin{frame}{Solution}
+Lets $t_1$ and $t_2$ be time such that $(t_1,t_2) \in (0,T)$.\\
+Already given that the probability that the telephone rings at the interval $(0,t_0)$ = $\dfrac{t_0}{T}$\\
+Lets take the event of call occurs at interval $(0,t_1)$ as $E$, for the interval $(0,t_2)$ as $F$ and for the interval $(t_1,t_2)$ be $Z$.
+\end{frame}
+
+\begin{frame}
+$\therefore P(E)= \dfrac{t_1}{T}$ and $P(F)=\dfrac{t_2}{T}$\\
+From the above we can say that the event $Z = F-E$\\
+\begin{align}
+\therefore P(Z) &= P(F-E)\\
+&=P(F)-P(E)\\
+&=\dfrac{t_2}{T}-\dfrac{t_1}{T}\\
+&=\dfrac{t_2-t_1}{T}
+\end{align}
+\end{frame}
+\end{document}
