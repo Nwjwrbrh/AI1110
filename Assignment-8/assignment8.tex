@@ -1,0 +1,87 @@
+\documentclass{beamer}
+% Theme choice:
+\usetheme{CambridgeUS}
+% Title page details: 
+\title{Assignment-8} 
+\author{Nwjwr Khungur Brahma (AI20BTECH11016)}
+\date{\today}
+\newcounter{currentenumi}
+\begin{document}
+
+\begin{frame}
+\titlepage
+\end{frame}
+
+\begin{frame}{Outline}
+\tableofcontents
+\end{frame}
+
+\section{Question}
+\begin{frame}{Question}
+$x$ and $y$ are independent identically distributed normal random variables with zero mean and common variance $\sigma^{2}$, that is, $x  \sim N(0,\sigma^{2}),$ $y \sim N(0,\sigma^{2})$ and $f_{xy}(x,y)= f_x(x).f_y(y).$\\
+Find the pdf of
+\begin{enumerate}
+\item $x$ = $\sqrt{x^{2}+y^{2}}$
+\item $w$ = $x^{2}+y^{2}$
+\item $u$ = $x - y$
+\end{enumerate}
+\end{frame}
+
+\section{Solution}
+\begin{frame}{Solution}
+\begin{enumerate}
+\item For $z$ = $\sqrt{x^{2}+y^{2}}$\\ 
+The case corresponds to a circle with radius $z$. Thus
+\begin{align}
+F_z(z)= \int_{y=\text{-}z}^{z} \int_{x=\text{-}\sqrt{z^{2}-y^{2}}}^{\sqrt{z^{2}-y^{2}}} f_{xy}(x,y)\,dx \,dy
+\end{align}
+and by differentiation,
+\begin{align}
+f_z(z)= \int_{-z}^{z} \frac{z}{\sqrt{z^{2}-y^{2}}} \left(f_{xy}(\sqrt{z^{2}-y^{2}},y)+f_{xy}(\text{-}\sqrt{z^{2}-y^{2}},y)\right) \,dy
+\end{align}
+As $x$ and $y$ are zero mean independent Gaussian random variables with common variance $\sigma^{2}$
+\begin{align}
+f_z(z)= 2 \int_{0}^{z} \frac{z}{\sqrt{z^{2}-y^{2}}}\frac{2}{2 \pi \sigma^{2}} \exp^{\frac{\text{-}(z^{2}-y^2+y^2)}{2 \sigma^2}} \,dy
+\end{align}
+\setcounter{currentenumi}{\theenumi}
+\end{enumerate}
+\end{frame}
+
+\begin{frame}
+\begin{align}
+&=\frac{2z}{\pi \sigma^2} \exp^{\text{-}\frac{z^2}{2\sigma^2}} \int_0^z \frac{1}{\sqrt{z^2-y^2}} \,dy\\
+&=\frac{2z}{\pi \sigma^2} \exp^{\frac{\text{-}z^2}{2 \sigma^2}} \int_0^{\frac{\pi}{2}} \frac{z \cos \theta}{z \cos \theta} \,d\theta\\
+&=\frac{2z}{\pi \sigma^2} \exp^{\frac{\text{-}z^2}{2 \sigma^2}}U(z)
+\end{align}
+\end{frame}
+
+\begin{frame}
+\begin{enumerate}
+\setcounter{enumi}{\thecurrentenumi}
+\item We know that for $z$ = $\sqrt{x^{2}+y^{2}}$
+\begin{align}
+f_z(z)= \int_{-z}^{z} \frac{z}{\sqrt{z^{2}-y^{2}}} \left(f_{xy}(\sqrt{z^{2}-y^{2}},y)+f_{xy}(\text{-}\sqrt{z^{2}-y^{2}},y)\right) \,dy
+\end{align}
+As $w = x^2 + y^2$, x and y are independent random variables with zero mean and common variance $\sigma^{2}$.
+\begin{align}
+f_w(w)&= \int_{\text{-}\sqrt{w}}^{\sqrt{w}} \frac{1}{2 \sqrt{w-y^2}} \left(2.\frac{1}{2 \pi \sigma^{2}} \exp^{(\frac{w-y^{2}+y^{2}}{2 \sigma^{2}})}\right) \,dy\\
+&=\frac{\exp^{\frac{\text{-}w}{2\sigma^{2}}}}{\pi \sigma^{2}} \int_{0}^{\sqrt{w}}\frac{1}{\sqrt{w-y^{2}}} \,dy\\
+&=\frac{\exp^{\frac{\text{-}w}{2\sigma^{2}}}}{\pi \sigma^{2}} \int_{0}^{\frac{\pi}{2}} \frac{\sqrt{w}\cos \theta}{\sqrt{w}\cos \theta} \,d\theta\\
+&=\frac{1}{2 \sigma^{2}} \exp^{\frac{\text{-}w}{2 \sigma^{2}}} U(w)
+\end{align}
+\setcounter{currentenumi}{\theenumi}
+\end{enumerate}
+\end{frame}
+
+\begin{frame}
+\begin{enumerate}
+\setcounter{enumi}{\thecurrentenumi}
+\item For $u = x-y$\\
+Since linear combinations of jointly Gaussian random variables are Gaussian random Variables. Here $var(u)= var(x) + var(y) = 2\sigma^2$\\
+So $u = x-y \sim N(0,2\sigma^2)$\\
+\begin{align}
+f_u(u)&= \int_{\text{-} \infty}^{\infty} f_x(z+y)f_y(y)\,dy
+\end{align}
+\end{enumerate}
+\end{frame}
+\end{document}
